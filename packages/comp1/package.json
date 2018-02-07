@@ -1,11 +1,13 @@
 {
   "name": "@snakebel/comp1",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/comp1.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "browser": "dist/comp1.js",
   "scripts": {
     "build": "stencil build"
@@ -24,9 +26,9 @@
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1",
+    "lerna": "^2.8.0",
     "prettier": "^1.10.2",
-    "tslint": "^5.9.1",
-    "lerna": "^2.8.0"
+    "tslint": "^5.9.1"
   },
   "publishConfig": {
     "access": "public"
