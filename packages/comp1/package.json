@@ -1,16 +1,18 @@
 {
   "name": "comp1",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/comp1.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "browser": "dist/comp1.js",
   "scripts": {
     "build": "stencil build"
   },
-   "dependencies": {
+  "dependencies": {
     "@stencil/core": "0.2.3",
     "jss": "^9.6.0",
     "jss-preset-default": "^4.1.0"
