@@ -1,6 +1,6 @@
 {
   "name": "@snakebel/comp2",
-  "version": "3.0.0",
+  "version": "0.0.1-beta.0",
   "description": "",
   "main": "dist/comp2.js",
   "types": "dist/types/index.d.ts",
