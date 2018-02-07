@@ -1,0 +1,12 @@
+language: node_js
+node_js :
+  - "8.9.3"
+
+script:
+  - npm install
+  - npm run build:project
+  - npm run build
+
+after_success:
+  - npm run semantic-release
+

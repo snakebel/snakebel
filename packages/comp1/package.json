@@ -1,0 +1,29 @@
+{
+  "name": "comp1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/comp1.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": ["dist/"],
+  "browser": "dist/comp1.js",
+  "scripts": {
+    "build": "stencil build"
+  },
+   "dependencies": {
+    "@stencil/core": "0.2.3",
+    "jss": "^9.6.0",
+    "jss-preset-default": "^4.1.0"
+  },
+  "devDependencies": {
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/jest": "^21.1.1",
+    "jest": "^21.2.1",
+    "prettier": "^1.10.2",
+    "tslint": "^5.9.1",
+    "lerna": "^2.8.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
