@@ -8,6 +8,10 @@
   "files": [
     "dist/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snakebel/snakebel.git"
+  },
   "browser": "dist/comp2.js",
   "scripts": {
     "build": "stencil build"

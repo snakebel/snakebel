@@ -5,12 +5,14 @@
   "main": "dist/comp1.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "browser": "dist/comp1.js",
   "scripts": {
     "build": "stencil build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snakebel/snakebel.git"
   },
   "dependencies": {
     "@stencil/core": "0.2.3",
