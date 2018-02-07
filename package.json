@@ -1,7 +1,7 @@
 {
   "name": "snakebel",
   "description": "Tiny reusable web-components or Custom HTML Elements",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "main": "dist/snakebel.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
@@ -10,6 +10,7 @@
   ],
   "browser": "dist/snakebel.js",
   "scripts": {
+    "commit": "git cz",
     "postinstall": "npm run bootstrap",
     "bootstrap": "lerna bootstrap --hoist",
     "distclean": "lerna clean --yes && rm -rf node_modules && rm -rf dist",
@@ -23,7 +24,8 @@
     "start": "npm run dev",
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache",
-    "semantic-release": "lerna-semantic-release pre && lerna-semantic-release post && lerna-semantic-release perform"
+    "semantic-release": "lerna-semantic-release pre && lerna-semantic-release post && lerna-semantic-release perform",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
     "@stencil/core": "0.2.3",
@@ -39,11 +41,13 @@
     "lerna": "^2.8.0",
     "lerna-semantic-release": "^9.1.0",
     "prettier": "^1.10.2",
-    "tslint": "^5.9.1"
+    "tslint": "^5.9.1",
+    "travis-deploy-once": "^4.3.4",
+    "semantic-release": "^12.4.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snakebel/snakebel.git"
+    "url": "https://github.com/snakebel/snakebel.git"
   },
   "keywords": [
     "web-components"
