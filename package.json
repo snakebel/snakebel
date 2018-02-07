@@ -1,11 +1,13 @@
 {
-  "name": "snakebel",
+  "name": "@snakebel/snakebel",
   "description": "Tiny reusable web-components or Custom HTML Elements",
   "version": "0.0.0-development",
   "main": "dist/snakebel.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "browser": "dist/snakebel.js",
   "scripts": {
     "commit": "git-cz",
@@ -13,19 +15,16 @@
     "bootstrap": "lerna bootstrap --hoist",
     "distclean": "lerna clean --yes && rm -rf node_modules && rm -rf dist",
     "updated": "lerna updated || exit 0",
-    "bump":
-      "lerna publish --exact --skip-npm --since \"v$(npm info primer version)\"",
+    "bump": "lerna publish --exact --skip-npm --since \"v$(npm info primer version)\"",
     "lint": "lerna run lint",
     "build:project": "lerna run build",
     "build": "stencil build",
-    "dev":
-      "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev",
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache",
-    "semantic-release":
-      "lerna-semantic-release pre && lerna-semantic-release post && lerna-semantic-release perform",
+    "semantic-release": "lerna-semantic-release pre && lerna-semantic-release post && lerna-semantic-release perform",
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
@@ -48,9 +47,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snakebel/snakebel.git"
+    "url": "git+https://github.com/snakebel/snakebel.git"
   },
-  "keywords": ["web-components"],
+  "keywords": [
+    "web-components"
+  ],
   "author": "Santhosh Beerelli",
   "license": "MIT",
   "bugs": {
@@ -59,11 +60,16 @@
   "homepage": "https://github.com/snakebel/snakebel#readme",
   "jest": {
     "transform": {
-      "^.+\\.(ts|tsx)$":
-        "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "json", "jsx"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
   },
   "publishConfig": {
     "access": "public"
