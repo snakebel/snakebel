@@ -1,13 +1,11 @@
 {
-  "name": "comp2",
-  "version": "2.0.0",
+  "name": "snakebel/comp2",
+  "version": "0.0.1-beta.1",
   "description": "",
   "main": "dist/comp2.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "browser": "dist/comp2.js",
   "scripts": {
     "build": "stencil build"
