@@ -6,9 +6,7 @@ cache:
 
 node_js:
   - '9'
-  - '8'
-  - '6'
-  - '4'
+
 before_script:
   - npm prune
 
