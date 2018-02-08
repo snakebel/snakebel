@@ -1,27 +1,14 @@
 sudo: false
-
 language: node_js
+cache:
+  directories:
+    - ~/.npm
 
 node_js:
   - '9'
-
-deploy:
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_TOKEN
-  on:
-    tags: true
-
-cache:
-  directories:
-    - node_modules
-
-branches:
-  only:
-    - master
-notifications:
-  email: false
-
+  - '8'
+  - '6'
+  - '4'
 before_script:
   - npm prune
 
@@ -29,8 +16,8 @@ script:
   - npm install
   - npm run build:project
   - npm run build
-
 after_success:
-  - printf "https://registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
-  - npm run publish-to-npm
-
+  - npm run travis-deploy-once "npm run semantic-release"
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
