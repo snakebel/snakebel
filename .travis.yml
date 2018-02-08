@@ -29,5 +29,6 @@ script:
   - npm run build
 
 after_success:
+  - printf "//registry.mycompany.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
   - npm run publish-to-npm
 
