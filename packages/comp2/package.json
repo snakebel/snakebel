@@ -1,13 +1,11 @@
 {
   "name": "@snakebel/comp2",
-  "version": "0.0.1",
+  "version": "0.0.1-beta.0",
   "description": "",
   "main": "dist/comp2.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snakebel/snakebel.git"

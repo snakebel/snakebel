@@ -13,8 +13,7 @@
     "bootstrap": "lerna bootstrap --hoist",
     "distclean": "lerna clean --yes && rm -rf node_modules && rm -rf dist",
     "updated": "lerna updated || exit 0",
-    "bump":
-      "lerna publish --exact --skip-npm --since \"v$(npm info primer version)\"",
+    "bump": "lerna publish --exact --skip-npm --since \"v$(npm info primer version)\"",
     "lint": "lerna run lint",
     "build:project": "lerna run build",
     "build": "stencil build",
@@ -24,8 +23,7 @@
     "start": "npm run dev",
     "test": "jest --no-cache",
     "test.watch": "jest --watch --no-cache",
-    "semantic-release":
-      "lerna-semantic-release pre && lerna-semantic-release perform",
+    "publish-to-npm": "lerna publish --canary --yes",
     "travis-deploy-once": "travis-deploy-once"
   },
   "dependencies": {
