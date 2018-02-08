@@ -7,7 +7,7 @@ node_js:
 
 deploy:
   provider: npm
-  email: $NPM_EMAIL
+  email: $NPM_CONFIG_USERNAME
   api_key: $NPM_TOKEN
 
 cache:
