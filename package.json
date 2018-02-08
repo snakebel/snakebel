@@ -64,7 +64,8 @@
     "moduleFileExtensions": ["ts", "tsx", "js", "json", "jsx"]
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "http://my-npme-server:8080"
   },
   "config": {
     "commitizen": {

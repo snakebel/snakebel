@@ -7,8 +7,10 @@ node_js:
 
 deploy:
   provider: npm
-  email: $NPM_CONFIG_USERNAME
+  email: $NPM_EMAIL
   api_key: $NPM_TOKEN
+  on:
+    tags: true
 
 cache:
   directories:
@@ -29,6 +31,6 @@ script:
   - npm run build
 
 after_success:
-  - printf "//registry.mycompany.com/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+  - printf "https://registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
   - npm run publish-to-npm
 
