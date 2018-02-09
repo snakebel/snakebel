@@ -26,8 +26,7 @@
     "test.watch": "jest --watch --no-cache",
     "publish-to-npm": "lerna publish --canary --yes",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release":
-      "lerna-semantic-release pre && lerna-semantic-release perform && semantic-release"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@stencil/core": "0.2.3",

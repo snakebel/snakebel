@@ -15,6 +15,7 @@ script:
   - npm run build:project
   - npm run build
 after_success:
+  - lerna publish --conventional-commits --canary --yes
   - npm run travis-deploy-once "npm run semantic-release"
 branches:
   except:
