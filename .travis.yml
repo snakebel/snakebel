@@ -4,19 +4,26 @@ cache:
   directories:
     - ~/.npm
 
+branches:
+      only:
+      - master
+
 node_js:
   - '9'
 
+before_install:
+  - npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+
 before_script:
   - npm prune
+  - git checkout master
+  - lerna updated --json
 
 script:
   - npm install
   - npm run build:project
   - npm run build
+  - lerna publish -m "bump versions [ci skip]" --conventional-commits --yes
+
 after_success:
-  - lerna publish --conventional-commits --canary --yes
   - npm run travis-deploy-once "npm run semantic-release"
-branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
