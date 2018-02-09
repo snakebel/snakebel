@@ -3,7 +3,7 @@ import { Component } from "@stencil/core";
 @Component({
   tag: "comp-one",
   styleUrl: "comp1.scss",
-  shadow: true
+  shadow: false
 })
 export class MyComponent1 {
   render() {
