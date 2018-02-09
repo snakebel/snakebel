@@ -7,6 +7,7 @@ import { Component } from "@stencil/core";
 })
 export class MyComponent2 {
   render() {
+    // test comment
     return <div class="card">comp2</div>;
   }
 }
