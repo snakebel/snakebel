@@ -16,14 +16,13 @@ before_install:
 
 before_script:
   - npm prune
-  - git checkout master
   - lerna updated --json
 
 script:
   - npm install
   - npm run build:project
   - npm run build
-  - lerna publish -m "bump versions [ci skip]" --conventional-commits --yes
+  - lerna publish -m "bump versions [ci skip]" --conventional-commits --yes --skip-git
 
 after_success:
   - npm run travis-deploy-once "npm run semantic-release"
