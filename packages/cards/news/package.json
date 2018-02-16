@@ -1,6 +1,6 @@
 {
   "name": "@snakebel/news-card",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Snakebel News Card",
   "main": "dist/newscard.js",
   "types": "dist/types/index.d.ts",
