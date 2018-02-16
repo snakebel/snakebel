@@ -1,6 +1,6 @@
 exports.config = {
   srcDir: "src",
-  namespace: "comp2",
+  namespace: "newscard",
   generateDistribution: true,
-  generateWWW: false
+  generateWWW: true
 };

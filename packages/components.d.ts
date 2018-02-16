@@ -6,6 +6,41 @@
 
 
 import {
+  NewsCard as NewsCard
+} from './cards/news/src/newscard';
+
+declare global {
+  interface HTMLNewsCardElement extends NewsCard, HTMLElement {
+  }
+  var HTMLNewsCardElement: {
+    prototype: HTMLNewsCardElement;
+    new (): HTMLNewsCardElement;
+  };
+  interface HTMLElementTagNameMap {
+    "news-card": HTMLNewsCardElement;
+  }
+  interface ElementTagNameMap {
+    "news-card": HTMLNewsCardElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "news-card": JSXElements.NewsCardAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface NewsCardAttributes extends HTMLAttributes {
+      author?: string;
+      day?: string;
+      month?: string;
+      text?: string;
+      title?: string;
+      year?: string;
+    }
+  }
+}
+
+
+import {
   MyComponent1 as CompOne
 } from './comp1/src/comp1';
 
@@ -29,37 +64,6 @@ declare global {
   }
   namespace JSXElements {
     export interface CompOneAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
-    }
-  }
-}
-
-
-import {
-  MyComponent2 as CompTwo
-} from './comp2/src/comp2';
-
-declare global {
-  interface HTMLCompTwoElement extends CompTwo, HTMLElement {
-  }
-  var HTMLCompTwoElement: {
-    prototype: HTMLCompTwoElement;
-    new (): HTMLCompTwoElement;
-  };
-  interface HTMLElementTagNameMap {
-    "comp-two": HTMLCompTwoElement;
-  }
-  interface ElementTagNameMap {
-    "comp-two": HTMLCompTwoElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "comp-two": JSXElements.CompTwoAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface CompTwoAttributes extends HTMLAttributes {
       first?: string;
       last?: string;
     }

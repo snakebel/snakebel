@@ -1,34 +1,33 @@
 {
-  "name": "@snakebel/comp1",
+  "name": "@snakebel/util",
   "version": "0.0.1",
-  "description": "",
-  "main": "dist/comp1.js",
+  "description": "Util package for snakebel",
+  "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": ["dist/"],
-  "browser": "dist/comp1.js",
+  "browser": "dist/index.js",
   "scripts": {
-    "build": "stencil build",
-    "test": "jest --no-cache"
+    "build": "stencil build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snakebel/snakebel.git"
   },
+  "author": "Santhosh Beerelli",
+  "license": "MIT",
   "dependencies": {
     "@stencil/core": "0.2.3",
     "jss": "^9.8.0",
-    "jss-preset-default": "^4.3.0",
-    "@snakebel/util": "^0.0.1"
+    "jss-preset-default": "^4.3.0"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
     "jest": "^21.2.1",
-    "lerna": "^2.8.0",
     "prettier": "^1.10.2",
-    "tslint": "^5.9.1"
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2"
   },
   "publishConfig": {
     "access": "public"
@@ -40,7 +39,5 @@
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
     "moduleFileExtensions": ["ts", "tsx", "js", "json", "jsx"]
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

@@ -1,12 +1,12 @@
 {
-  "name": "@snakebel/comp1",
+  "name": "@snakebel/news-card",
   "version": "0.0.1",
-  "description": "",
-  "main": "dist/comp1.js",
+  "description": "Snakebel News Card",
+  "main": "dist/newscard.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": ["dist/"],
-  "browser": "dist/comp1.js",
+  "browser": "dist/newscard.js",
   "scripts": {
     "build": "stencil build",
     "test": "jest --no-cache"
@@ -19,7 +19,7 @@
     "@stencil/core": "0.2.3",
     "jss": "^9.8.0",
     "jss-preset-default": "^4.3.0",
-    "@snakebel/util": "^0.0.1"
+    "@snakebel/util": "0.0.1"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
@@ -41,6 +41,7 @@
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
     "moduleFileExtensions": ["ts", "tsx", "js", "json", "jsx"]
   },
-  "author": "",
-  "license": "ISC"
+
+  "author": "Santhosh Beerelli",
+  "license": "MIT"
 }
