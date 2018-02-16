@@ -39,35 +39,4 @@ declare global {
   }
 }
 
-
-import {
-  MyComponent1 as CompOne
-} from './comp1/src/comp1';
-
-declare global {
-  interface HTMLCompOneElement extends CompOne, HTMLElement {
-  }
-  var HTMLCompOneElement: {
-    prototype: HTMLCompOneElement;
-    new (): HTMLCompOneElement;
-  };
-  interface HTMLElementTagNameMap {
-    "comp-one": HTMLCompOneElement;
-  }
-  interface ElementTagNameMap {
-    "comp-one": HTMLCompOneElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "comp-one": JSXElements.CompOneAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface CompOneAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
-    }
-  }
-}
-
 declare global { namespace JSX { interface StencilJSX {} } }

@@ -7,9 +7,7 @@
   "collection": "dist/collection/collection-manifest.json",
   "files": ["dist/"],
   "browser": "dist/index.js",
-  "scripts": {
-    "build": "stencil build"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snakebel/snakebel.git"

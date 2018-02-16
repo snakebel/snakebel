@@ -14,8 +14,5 @@
     "jsxFactory": "h"
   },
   "include": ["packages", "types/jsx.d.ts"],
-  "exclude": ["node_modules"],
-  "paths": {
-    "@snakebel/*": ["./*/src"]
-  }
+  "exclude": ["node_modules"]
 }
